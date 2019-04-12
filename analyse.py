@@ -12,6 +12,8 @@ def analyse(file_name):
                                               'features': [{'type': vision.enums.Feature.Type.LABEL_DETECTION}], })
 
     labels = image.detect_labels()
-
+    Label = []
     for label in labels:
-        print(label.description)
+        Label.append(label.description)
+    
+    return(Label)
